@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.textContent = '☀️';
     }
     
-    // Добавляем обработчик события для кнопки
-    button.addEventListener('click', toggleTheme);
+
 });
 
 function toggleTheme() {
