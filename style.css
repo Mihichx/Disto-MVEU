@@ -148,3 +148,9 @@ footer .wrapper img {
         font-size: 13px;
     }
 }
+
+@media (max-width: 768px) {
+    main {
+        min-height: 400px;
+    }
+}
