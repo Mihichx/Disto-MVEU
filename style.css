@@ -148,18 +148,3 @@ footer .wrapper img {
         font-size: 13px;
     }
 }
-
-@media (max-width: 768px) {
-    body {
-        min-height: auto;
-    }
-    
-    main {
-        min-height: auto;
-        height: calc(100vh - 170px);
-    }
-    
-    .entrance {
-        margin-top: 50px;
-    }
-}
