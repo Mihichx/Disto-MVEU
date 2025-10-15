@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p, a {
+    font-family: 'Raleway', PT Sans, Helvetica, Calibri, Arial, Helvetica
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a[href]:hover {
+    color: rgba(71, 71, 71, 0.753);
+}
+
+header {
+    background-image: linear-gradient(145deg, #4EC4F2, #4D89BF);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header .wrapper {
+    margin-left: 60px;
+}
+
+header img {
+    height: 55px;
+    padding: 0 20px;
+}
+
+body .wrapper1 {
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-image: url(./img/mveu-back-gr.png);
+    background-size: cover;
+    height: 1080px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.entrance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #55a8e0;
+    box-shadow: -6px 0px 4px rgba(0, 0, 0, 0.25), 6px 0px 4px rgba(0, 0, 0, 0.25), 0px 6px 4px rgba(0, 0, 0, 0.25), 0px -6px 4px rgba(0, 0, 0, 0.25);
+    width: 354px;
+    height: 195px;
+    border-radius: 17px;
+    margin-top: 267px;
+}
+
+input {
+    padding-left: 10px;
+    width: 214px;
+    height: 30px;
+    margin-top: 25px; 
+    border-radius: 5px;
+    border: 2px solid #bebebe;
+}
+
+.entrance .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.entrance .wrapper button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+    margin: 0 20px;
+    padding: 10px;
+}
+.entrance .wrapper button:hover {
+    color: rgba(255, 255, 255, 0.753);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    background: rgb(247, 247, 247);
+}
+
+footer .wrapper {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.15);
+    width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.separator {
+    width: 1px;
+    height: 55px;
+    background-color: #C7C7C7;
+    margin: 0 30px;
+}
+
+footer .wrapper img {
+    height: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.tex-block a {
+    display: block;
+}
+
+@media (max-width: 1315px) {
+    footer .wrapper {
+        padding: 0 10px;
+    }
+
+    .separator {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 1070px) {
+    footer a {
+        font-size: 13px;
+    }
+}
