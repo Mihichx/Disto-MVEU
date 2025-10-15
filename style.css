@@ -102,7 +102,6 @@ input {
 footer {
     display: flex;
     justify-content: center;
-    height: 80px;
     width: 100%;
     background: rgb(247, 247, 247);
 }
@@ -112,13 +111,15 @@ footer .wrapper {
     align-items: center;
     justify-content: center;
     padding: 0 30px;
+    max-width: 1920px;
+    width: 100%;
 }
 
 .separator {
     width: 1px;
     height: 55px;
     background-color: #C7C7C7;
-    margin: 0 30px;
+    margin: 30px 30px;
 }
 
 footer .wrapper img {
@@ -133,18 +134,92 @@ footer .wrapper img {
     display: block;
 }
 
-@media (max-width: 1315px) {
-    footer .wrapper {
-        padding: 0 10px;
-    }
+.tex-block {
+    text-align: left;
+}
 
-    .separator {
-        margin: 0 10px;
+/* Большие десктопы */
+@media (max-width: 1400px) {
+    footer .wrapper {
+        padding: 0 20px;
     }
 }
 
-@media (max-width: 1070px) {
+/* Десктопы */
+@media (max-width: 1200px) {
+    footer .wrapper {
+        padding: 0 15px;
+    }
+    .separator {
+        margin: 30px 15px;
+    }
+}
+
+/* Планшеты (горизонтально) */
+@media (max-width: 992px) {
     footer a {
-        font-size: 13px;
+        font-size: 14px;
+    }
+    .separator {
+        margin: 30px 10px;
+    }
+}
+
+/* Планшеты (вертикально) */
+@media (max-width: 768px) {
+    .entrance {
+        margin: 300px 0;
+    }
+    header {
+        height: 70px;
+    }
+    header .wrapper {
+        margin-left: 20px;
+    }
+    header img {
+        height: 40px;
+        padding: 0 10px;
+    }
+    main {
+        min-height: 500px;
+    }
+    input {
+        width: 80%;
+        max-width: 250px;
+    }
+    footer .wrapper {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .separator {
+        width: 80%;
+        height: 1px;
+        margin: 15px 0;
+    }
+    .tex-block {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Мобильные (большие) */
+@media (max-width: 576px) {
+    header {
+        height: 60px;
+    }
+    header img {
+        height: 35px;
+        padding: 0 5px;
+    }
+    footer a {
+        font-size: 12px;
+    }
+}
+
+/* Мобильные (маленькие) */
+@media (max-width: 480px) {
+    footer .wrapper {
+        padding: 15px;
     }
 }
