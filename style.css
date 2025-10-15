@@ -1,294 +1,307 @@
-* {
-    margin: 0;
-    padding: 0;
+/*MARK: Правила сайта
+*/
+
+* { /* Сброс всех отступов для всех элементов */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
 }
 
-p, a {
-    font-family: 'Raleway', PT Sans, Helvetica, Calibri, Arial, Helvetica;
-    font-size: 16px;
+a { /* Стили для всех ссылок */
+    font-family: 'Raleway', PT Sans, Helvetica, Calibri, Arial, Helvetica; /* Шрифт с запасными вариантами */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет от родителя */
+    font-size: 14px; /* Уменьшаем размер шрифта */
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a[href]:hover { /* Эффект при наведении на ссылки с href */
+    color: rgba(71, 71, 71, 0.753); /* Серый цвет с прозрачностью */
 }
 
-a[href]:hover {
-    color: rgba(71, 71, 71, 0.753);
+body { /* Основной контейнер страницы */
+    min-height: 100svh; /* Минимальная высота = высота экрана */
+    display: flex; /* Flexbox контейнер */
+    flex-direction: column; /* Элементы в столбик */
+    background-image: url(./img/mveu-back-gr.png); /* Фоновое изображение */
+    background-size: cover; /* Фон покрывает всю область */
+    background-attachment: fixed; /* Фон не скроллится */
 }
 
-header {
-    background-image: linear-gradient(145deg, #4EC4F2, #4D89BF);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 60px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+body .wrapper1 { /* Основной контейнер контента */
+    flex: 1; /* Занимает все свободное место */
+    display: flex; /* Flexbox контейнер */
+    flex-direction: column; /* Элементы в столбик */
 }
 
-header .wrapper {
-    margin-left: 20px;
+/*MARK: Шапка
+*/
+
+header { /* Стили шапки сайта */
+    background-image: linear-gradient(145deg, #4EC4F2, #4D89BF); /* Градиент от голубого к синему */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.30); /* Тень снизу */
+    height: 80px; /* Высота шапки */
+    display: flex; /* Flexbox контейнер */
+    align-items: center; /* Выравнивание по центру вертикально */
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Слой выше других элементов */
 }
 
-header img {
-    height: 35px;
-    padding: 0 15px;
+header .wrapper { /* Контейнер внутри шапки */
+    margin-left: 20px; /* Отступ слева */
 }
 
-body {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    background-image: url(./img/mveu-back-gr.png);
-    background-size: cover;
-    background-attachment: fixed;
+header img { /* Изображения в шапке */
+    height: 45px; /* Высота логотипов */
+    padding: 0 15px; /* Отступы слева и справа */
 }
 
-body .wrapper1 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+/*MARK: Контент
+*/
+
+main { /* Основная область контента */
+    display: flex; /* Flexbox контейнер */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex: 1; /* Занимает все свободное место */
+    min-height: 500px; /* Минимальная высота */
+    width: 100%; /* Полная ширина */
+    max-width: 1920px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование блока */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Включаем padding в размер */
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    min-height: 500px;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+.entrance { /* Форма входа */
+    display: flex; /* Flexbox контейнер */
+    flex-direction: column; /* Элементы в столбик */
+    align-items: center; /* Центрирование элементов */
+    background-color: #55a8e0; /* Голубой фон */
+    box-shadow: -6px 0px 19px rgba(0, 35, 88, 0.25), 6px 0px 19px rgba(0, 35, 88, 0.25), 0px 6px 19px rgba(0, 35, 88, 0.25), 0px -6px 19px rgba(0, 35, 88, 0.25); /* Тень со всех сторон */
+    width: 90%; /* Ширина 90% от родителя */
+    max-width: 354px; /* Максимальная ширина */
+    min-height: 195px; /* Минимальная высота */
+    border-radius: 17px; /* Скругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Включаем padding в размер */
 }
 
-.entrance {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #55a8e0;
-    box-shadow: -6px 0px 4px rgba(0, 0, 0, 0.25), 6px 0px 4px rgba(0, 0, 0, 0.25), 0px 6px 4px rgba(0, 0, 0, 0.25), 0px -6px 4px rgba(0, 0, 0, 0.25);
-    width: 90%;
-    max-width: 354px;
-    min-height: 195px;
-    border-radius: 17px;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 110px;
+input { /* Поля ввода */
+    padding-left: 10px; /* Отступ текста слева */
+    width: 90%; /* Ширина 90% от родителя */
+    max-width: 250px; /* Максимальная ширина */
+    height: 40px; /* Высота поля */
+    margin-top: 20px; /* Отступ сверху */
+    border-radius: 8px; /* Скругленные углы */
+    border: 2px solid #bebebe; /* Серая рамка */
+    font-size: 16px; /* Размер шрифта */
+    box-sizing: border-box; /* Включаем padding в размер */
 }
 
-input {
-    padding-left: 10px;
-    width: 90%;
-    max-width: 250px;
-    height: 40px;
-    margin-top: 20px;
-    border-radius: 8px;
-    border: 2px solid #bebebe;
-    font-size: 16px;
-    box-sizing: border-box;
+.entrance .wrapper { /* Контейнер кнопок в форме */
+    display: flex; /* Flexbox контейнер */
+    flex-direction: row; /* Элементы в строку */
+    margin-top: 20px; /* Отступ сверху */
+    width: 100%; /* Полная ширина */
+    justify-content: center; /* Центрирование кнопок */
 }
 
-.entrance .wrapper {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    width: 100%;
-    justify-content: center;
+.entrance .wrapper button { /* Кнопки в форме */
+    cursor: pointer; /* Курсор-указатель */
+    border: none; /* Убираем рамку */
+    background: none; /* Убираем фон */
+    color: white; /* Белый цвет текста */
+    margin: 0 15px; /* Отступы слева и справа */
+    padding: 12px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скругленные углы */
+    transition: all 0.3s ease; /* Плавный переход */
 }
 
-.entrance .wrapper button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: white;
-    margin: 0 15px;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+.entrance .wrapper button:hover { /* Эффект при наведении на кнопки */
+    color: rgba(255, 255, 255, 0.753); /* Полупрозрачный белый */
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
 }
 
-.entrance .wrapper button:hover {
-    color: rgba(255, 255, 255, 0.753);
-    background-color: rgba(255, 255, 255, 0.1);
+/*MARK: Подвал
+*/
+
+footer { /* Подвал сайта */
+    display: flex; /* Flexbox контейнер */
+    justify-content: center; /* Центрирование содержимого */
+    width: 100%; /* Полная ширина */
+    background: rgb(247, 247, 247); /* Светло-серый фон */
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.25); /* Тень снизу */
+    padding: 20px 0; /* Отступы сверху и снизу */
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background: rgb(247, 247, 247);
-    padding: 20px 0;
+footer .wrapper { /* Контейнер содержимого подвала */
+    display: flex; /* Flexbox контейнер */
+    align-items: center; /* Выравнивание по центру */
+    justify-content: center; /* Центрирование содержимого */
+    padding: 0 20px; /* Отступы слева и справа */
+    max-width: 1920px; /* Максимальная ширина */
+    width: 100%; /* Полная ширина */
+    flex-wrap: wrap; /* Перенос элементов на новую строку */
 }
 
-footer .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    max-width: 1920px;
-    width: 100%;
-    flex-wrap: wrap;
+.separator { /* Разделительная линия */
+    width: 1px; /* Ширина линии */
+    height: 55px; /* Высота линии */
+    background-color: #C7C7C7; /* Серый цвет */
+    margin: 0 20px; /* Отступы слева и справа */
 }
 
-.separator {
-    width: 1px;
-    height: 55px;
-    background-color: #C7C7C7;
-    margin: 0 20px;
+footer .wrapper img { /* Изображения(иконки) в подвале */
+    height: 40px; /* Высота иконок */
+    padding: 0 5px; /* Отступы слева и справа */
 }
 
-footer .wrapper img {
-    height: 30px;
+footer .wrapper img:hover { /* Эффект при наведении на иконки */
+    background-color: #55a8e0; /* Голубой фон */
 }
 
-.bold {
-    font-weight: bold;
+.bold { /* Жирный текст */
+    font-weight: bold; /* Жирное начертание */
 }
 
-.tex-block a {
-    display: block;
-    margin: 5px 0;
+.tex-block a { /* Ссылки в текстовых блоках */
+    display: block; /* Блочный элемент */
+    margin: 5px 0; /* Отступы сверху и снизу */
 }
 
-.tex-block {
-    text-align: left;
+.tex-block { /* Текстовые блоки */
+    text-align: left; /* Выравнивание текста по левому краю */
 }
-/* #region 📱 МЕДИА-ЗАПРОСЫ ДЛЯ АДАПТИВНОСТИ */
 
-@media (max-width: 1288px) {
-    footer a {
-        font-size: 14px;
+.social-networks { /* Блок социальных сетей */
+    padding-top: 5px; /* Внутренний отступ сверху */
+}
+
+/*MARK: Aдаптивность
+*/
+
+@media (max-width: 1288px) { /* Экраны до 1288px */
+    footer a { /* Ссылки в подвале */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+    footer .wrapper img { /* Иконки в подвале */
+        height: 35px; /* Уменьшаем высоту */
+    }   
+}
+
+@media (max-width: 1180px) { /* Экраны до 1180px */
+    .entrance { /* Форма входа */
+        min-height: 180px; /* Уменьшаем минимальную высоту */
+    }
+    footer a { /* Ссылки в подвале */
+        font-size: 13px; /* Еще больше уменьшаем шрифт */
+    }
+    footer .wrapper img { /* Иконки в подвале */
+        height: 30px; /* Еще больше уменьшаем высоту */
+    }  
+}
+
+@media (max-width: 1103px) { /* Экраны до 1103px */
+    .separator { /* Разделительные линии */
+        margin: 0 15px; /* Уменьшаем отступы */
+    }
+    footer a { /* Ссылки в подвале */
+        font-size: 11px; /* Минимальный размер шрифта */
+    }
+    .separator { /* Повторное уменьшение отступов */
+        margin: 0 10px; /* Еще меньше отступы */
+    }
+    footer .wrapper img { /* Иконки в подвале */
+        height: 25px; /* Минимальная высота иконок */
+    }  
+}
+
+@media (max-width: 880px) { /* Планшеты и большие мобильные */
+    header { /* Шапка */
+        height: 75px; /* Уменьшаем высоту */
+    }
+    header .wrapper { /* Контейнер шапки */
+        margin-left: 15px; /* Уменьшаем отступ */
+    }
+    header img { /* Логотипы в шапке */
+        height: 40px; /* Уменьшаем размер */
+        padding: 0 10px; /* Уменьшаем отступы */
+    }
+    main { /* Основная область */
+        min-height: 400px; /* Уменьшаем минимальную высоту */
+        padding: 15px; /* Уменьшаем отступы */
+    }
+    .entrance { /* Форма входа */
+        width: 95%; /* Увеличиваем ширину */
+        min-height: 170px; /* Уменьшаем высоту */
+        margin: 0; /* Убираем внешние отступы */
+    }
+    input { /* Поля ввода */
+        height: 45px; /* Увеличиваем высоту для удобства */
+        margin-top: 15px; /* Уменьшаем отступ */
+    }
+    .entrance .wrapper button { /* Кнопки формы */
+        padding: 15px 25px; /* Увеличиваем отступы */
+        margin: 0 10px; /* Уменьшаем отступы между кнопками */
+    }
+    footer .wrapper { /* Контейнер подвала */
+        flex-direction: column; /* Элементы в столбик */
+        padding: 15px; /* Уменьшаем отступы */
+    }
+    .separator { /* Разделители */
+        width: 80%; /* Горизонтальные линии */
+        height: 1px; /* Тонкие линии */
+        margin: 15px 0; /* Отступы сверху и снизу */
+    }
+    .tex-block { /* Текстовые блоки */
+        text-align: center; /* Центрируем текст */
+        margin: 10px 0; /* Отступы сверху и снизу */
+    }
+    footer .wrapper img { /* Иконки подвала */
+        height: 25px; /* Уменьшаем размер */
+        margin: 10px 0; /* Отступы сверху и снизу */
+    }
+    footer a { /* Ссылки подвала */
+        font-size: 14px; /* Увеличиваем для читаемости */
+    }
+    footer { /* Подвал */
+        padding: 0; /* Убираем отступы */
+    }
+    footer .wrapper img { /* Повторное определение иконок */
+        height: 35px; /* Увеличиваем для удобства */
+    }  
+}
+
+@media (max-width: 576px) { /* Мобильные устройства */
+    header { /* Шапка */
+        height: 70px; /* Минимальная высота */
+    }
+    header img { /* Логотипы */
+        height: 35px; /* Минимальный размер */
+    }
+    .entrance { /* Форма входа */
+        padding: 15px; /* Уменьшаем внутренние отступы */
+    }
+    .entrance .wrapper { /* Контейнер кнопок */
+        flex-direction: column; /* Кнопки в столбик */
+        align-items: center; /* Центрируем кнопки */
+    }
+    .entrance .wrapper button { /* Кнопки */
+        margin: 5px 0; /* Отступы сверху и снизу */
+        width: 90%; /* Почти полная ширина */
     }
 }
 
-@media (max-width: 1200px) {
-    .entrance {
-        min-height: 180px;
+@media (max-width: 375px) { /* Маленькие мобильные */
+    header .wrapper { /* Контейнер шапки */
+        margin-left: 10px; /* Минимальный отступ */
+    }   
+    header img { /* Логотипы */
+        padding: 0 5px; /* Минимальные отступы */
     }
-    footer a {
-        font-size: 13px;
+    .entrance { /* Форма входа */
+        border-radius: 12px; /* Уменьшаем скругление */
     }
-}
-
-@media (max-width: 1024px) {
-    .separator {
-        margin: 0 15px;
-    }
-    footer a {
-        font-size: 11px;
-    }
-    .separator {
-        margin: 0 10px;
+    input { /* Поля ввода */
+        height: 40px; /* Стандартная высота */
     }
 }
-
-@media (max-width: 870px) {
-    header {
-        height: 55px;
-    }
-    
-    header .wrapper {
-        margin-left: 15px;
-    }
-    
-    header img {
-        height: 30px;
-        padding: 0 10px;
-    }
-    
-    main {
-        min-height: 400px;
-        padding: 15px;
-    }
-    
-    .entrance {
-        width: 95%;
-        min-height: 170px;
-        margin: 0; 
-    }
-    
-    input {
-        height: 45px; 
-        font-size: 16px;
-        margin-top: 15px;
-    }
-    
-    .entrance .wrapper button {
-        padding: 15px 25px;
-        font-size: 16px;
-        margin: 0 10px;
-    }
-    
-    footer .wrapper {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .separator {
-        width: 80%;
-        height: 1px;
-        margin: 15px 0;
-    }
-    
-    .tex-block {
-        text-align: center;
-        margin: 10px 0;
-    }
-    
-    footer .wrapper img {
-        height: 25px;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 576px) {
-    header {
-        height: 50px;
-    }
-    
-    header img {
-        height: 25px;
-    }
-    
-    p, a, button, input {
-        font-size: 14px;
-    }
-    
-    .entrance {
-        padding: 15px;
-    }
-    
-    .entrance .wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .entrance .wrapper button {
-        margin: 5px 0;
-        width: 90%;
-    }
-}
-
-@media (max-width: 375px) {
-    header .wrapper {
-        margin-left: 10px;
-    }
-    
-    header img {
-        padding: 0 5px;
-    }
-    
-    .entrance {
-        border-radius: 12px;
-    }
-    
-    input {
-        height: 40px;
-    }
-}
-
-/* #endregion */
