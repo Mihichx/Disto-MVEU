@@ -4,7 +4,8 @@
 }
 
 p, a {
-    font-family: 'Raleway', PT Sans, Helvetica, Calibri, Arial, Helvetica
+    font-family: 'Raleway', PT Sans, Helvetica, Calibri, Arial, Helvetica;
+    font-size: 16px; /* Базовый размер шрифта */
 }
 
 a {
@@ -19,7 +20,7 @@ a[href]:hover {
 header {
     background-image: linear-gradient(145deg, #4EC4F2, #4D89BF);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 90px;
+    height: 60px; /* Уменьшил для мобильных */
     display: flex;
     align-items: center;
     position: relative;
@@ -27,12 +28,12 @@ header {
 }
 
 header .wrapper {
-    margin-left: 60px;
+    margin-left: 20px; /* Уменьшил отступ */
 }
 
 header img {
-    height: 55px;
-    padding: 0 20px;
+    height: 35px; /* Уменьшил логотип */
+    padding: 0 15px;
 }
 
 body {
@@ -53,11 +54,14 @@ body .wrapper1 {
 main {
     display: flex;
     justify-content: center;
+    align-items: center; /* Добавил для центрирования по вертикали */
     flex: 1;
-    min-height: 750px;
+    min-height: 500px; /* Уменьшил минимальную высоту */
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
+    padding: 20px; /* Добавил отступы */
+    box-sizing: border-box;
 }
 
 .entrance {
@@ -66,25 +70,32 @@ main {
     align-items: center;
     background-color: #55a8e0;
     box-shadow: -6px 0px 4px rgba(0, 0, 0, 0.25), 6px 0px 4px rgba(0, 0, 0, 0.25), 0px 6px 4px rgba(0, 0, 0, 0.25), 0px -6px 4px rgba(0, 0, 0, 0.25);
-    width: 354px;
-    height: 195px;
+    width: 90%; /* Вместо фиксированной ширины */
+    max-width: 354px; /* Максимальная ширина */
+    min-height: 195px;
     border-radius: 17px;
-    margin-top: 267px;
+    padding: 20px; /* Добавил внутренние отступы */
+    box-sizing: border-box;
 }
 
 input {
     padding-left: 10px;
-    width: 214px;
-    height: 30px;
-    margin-top: 25px; 
-    border-radius: 5px;
+    width: 90%; /* Адаптивная ширина */
+    max-width: 250px;
+    height: 40px; /* Увеличил высоту для удобства на мобильных */
+    margin-top: 20px;
+    border-radius: 8px; /* Увеличил радиус */
     border: 2px solid #bebebe;
+    font-size: 16px; /* Увеличил шрифт для мобильных */
+    box-sizing: border-box;
 }
 
 .entrance .wrapper {
     display: flex;
     flex-direction: row;
-    margin: 20px 0;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
 }
 
 .entrance .wrapper button {
@@ -92,11 +103,16 @@ input {
     border: none;
     background: none;
     color: white;
-    margin: 0 20px;
-    padding: 10px;
+    margin: 0 15px;
+    padding: 12px 20px; /* Увеличил padding */
+    font-size: 16px; /* Увеличил шрифт */
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
+
 .entrance .wrapper button:hover {
     color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 footer {
@@ -104,22 +120,24 @@ footer {
     justify-content: center;
     width: 100%;
     background: rgb(247, 247, 247);
+    padding: 20px 0;
 }
 
 footer .wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 30px;
+    padding: 0 20px;
     max-width: 1920px;
     width: 100%;
+    flex-wrap: wrap; /* Добавил перенос на мобильных */
 }
 
 .separator {
     width: 1px;
     height: 55px;
     background-color: #C7C7C7;
-    margin: 30px 30px;
+    margin: 0 20px;
 }
 
 footer .wrapper img {
@@ -132,73 +150,101 @@ footer .wrapper img {
 
 .tex-block a {
     display: block;
+    margin: 5px 0;
 }
 
 .tex-block {
     text-align: left;
 }
 
+/* ========== АДАПТИВ ========== */
+
 /* Большие десктопы */
-@media (max-width: 1400px) {
-    footer .wrapper {
-        padding: 0 20px;
+@media (max-width: 1288px) {
+    footer a {
+        font-size: 14px;
     }
 }
 
 /* Десктопы */
 @media (max-width: 1200px) {
-    footer .wrapper {
-        padding: 0 15px;
+    .entrance {
+        min-height: 180px;
     }
-    .separator {
-        margin: 30px 15px;
+    footer a {
+        font-size: 13px;
     }
 }
 
 /* Планшеты (горизонтально) */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+    .separator {
+        margin: 0 15px;
+    }
     footer a {
-        font-size: 14px;
+        font-size: 11px;
     }
     .separator {
-        margin: 30px 10px;
+        margin: 0 10px;
     }
 }
 
-/* Планшеты (вертикально) */
-@media (max-width: 768px) {
-    .entrance {
-        margin: 300px 0;
-    }
+/* Планшеты (вертикально) и мобильные */
+@media (max-width: 816px) {
     header {
-        height: 70px;
+        height: 55px;
     }
+    
     header .wrapper {
-        margin-left: 20px;
+        margin-left: 15px;
     }
+    
     header img {
-        height: 40px;
+        height: 30px;
         padding: 0 10px;
     }
+    
     main {
-        min-height: 500px;
+        min-height: 400px;
+        padding: 15px;
     }
+    
+    .entrance {
+        width: 95%;
+        min-height: 170px;
+        margin: 0; /* Убрал фиксированные отступы */
+    }
+    
     input {
-        width: 80%;
-        max-width: 250px;
+        height: 45px; /* Ещё больше для мобильных */
+        font-size: 16px; /* Важно для iOS */
+        margin-top: 15px;
     }
+    
+    .entrance .wrapper button {
+        padding: 15px 25px;
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    
     footer .wrapper {
         flex-direction: column;
-        height: auto;
-        padding: 20px;
+        padding: 15px;
     }
+    
     .separator {
         width: 80%;
         height: 1px;
         margin: 15px 0;
     }
+    
     .tex-block {
         text-align: center;
+        margin: 10px 0;
+    }
+    
+    footer .wrapper img {
+        height: 25px;
         margin: 10px 0;
     }
 }
@@ -206,20 +252,47 @@ footer .wrapper img {
 /* Мобильные (большие) */
 @media (max-width: 576px) {
     header {
-        height: 60px;
+        height: 50px;
     }
+    
     header img {
-        height: 35px;
-        padding: 0 5px;
+        height: 25px;
     }
-    footer a {
-        font-size: 12px;
+    
+    p, a, button, input {
+        font-size: 14px; /* Уменьшаем шрифт для маленьких экранов */
+    }
+    
+    .entrance {
+        padding: 15px;
+    }
+    
+    .entrance .wrapper {
+        flex-direction: column; /* Кнопки в столбик на очень маленьких экранах */
+        align-items: center;
+    }
+    
+    .entrance .wrapper button {
+        margin: 5px 0;
+        width: 90%;
     }
 }
 
 /* Мобильные (маленькие) */
-@media (max-width: 480px) {
-    footer .wrapper {
-        padding: 15px;
+@media (max-width: 375px) {
+    header .wrapper {
+        margin-left: 10px;
+    }
+    
+    header img {
+        padding: 0 5px;
+    }
+    
+    .entrance {
+        border-radius: 12px;
+    }
+    
+    input {
+        height: 40px;
     }
 }
