@@ -47,7 +47,7 @@ body .wrapper1 { /* Основной контейнер контента */
     --bg-color: #1a1a1a;
     --text-color: #ffffff;
     --footer-bg: #2d2d2d;
-    --entrance-bg: #2c5aa0;
+    --entrance-bg: #55a8e0;
     --input-border: #555555;
     --separator-color: #555555;
     --bg-image: url(./img/mveu-back-gr-bl.png);
@@ -79,7 +79,7 @@ header img { /* Изображения в шапке */
 .theme-toggle { /* Кнопка переключения темы */
     position: absolute; /* Абсолютное позиционирование */
     right: 20px; /* Прижатие к правому краю */
-    top: 49%; /* По центру вертикально */
+    top: 48%; /* По центру вертикально */
     transform: translateY(-50%); /* Центрирование по вертикали */
     background: none; /* Полупрозрачный фон */
     border: none; /* Полупрозрачная рамка */
@@ -88,6 +88,10 @@ header img { /* Изображения в шапке */
     height: 50px; /* Высота */
     cursor: pointer; /* Курсор-указатель */
     font-size: 25px; /* Размер иконки */
+}
+
+.theme-toggle:hover { /* Кнопка переключения темы */
+    border: 1px solid rgb(184, 184, 184);
 }
 
 /*MARK: Контент
@@ -190,10 +194,11 @@ footer .wrapper { /* Контейнер содержимого подвала */
 footer .wrapper img { /* Изображения(иконки) в подвале */
     height: 40px; /* Высота иконок */
     padding: 0 5px; /* Отступы слева и справа */
+    border-radius: 8px;
 }
 
 footer .wrapper img:hover { /* Эффект при наведении на иконки */
-    background-color: #55a8e0; /* Голубой фон */
+    background-color: #60a5ff; /* Голубой фон */
 }
 
 .bold { /* Жирный текст */
