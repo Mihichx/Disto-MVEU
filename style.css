@@ -112,17 +112,12 @@ main { /* Основная область контента */
     box-sizing: border-box; /* Включаем padding в размер */
 }
 
-:root {
-    --mainas1: #4EC4F2;
-    --mainas2: #4d8abfe5;
-}
-
 .entrance { /* Форма входа */
     display: flex; /* Flexbox контейнер */
     flex-direction: column; /* Элементы в столбик */
     align-items: center; /* Центрирование элементов */
-    background-image: linear-gradient(0deg, #4EC4F2, #4d8abfe5); /* Фон из переменной */
-    box-shadow: -1px 0px 19px rgba(0, 35, 88, 0.25), 1px 0px 19px rgba(0, 35, 88, 0.25), 0px 1px 19px var(--mainas1), 0px -1px 19px var(--mainas2); /* Тень со всех сторон */
+    background-image: linear-gradient(0deg, #4EC4F2, #4d8abff6); /* Фон из переменной */
+    box-shadow: -1px 0px 15px rgba(0, 35, 88, 0.25), 1px 0px 15px rgba(0, 35, 88, 0.25), 0px 1px 15px rgba(0, 35, 88, 0.25), 0px -1px 15px rgba(0, 35, 88, 0.25); /* Тень со всех сторон */
     width: 90%; /* Ширина 90% от родителя */
     max-width: 354px; /* Максимальная ширина */
     min-height: 195px; /* Минимальная высота */
