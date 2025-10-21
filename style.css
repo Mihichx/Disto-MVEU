@@ -36,19 +36,21 @@ body .wrapper1 { /* Основной контейнер контента */
     --bg-color: #ffffff;
     --text-color: #000000;
     --footer-bg: rgb(247, 247, 247);
-    --entrance-bg: #55a8e0;
     --input-border: #bebebe;
+    --input-bg: #ffffff;
+    --i-plaveholder-color: #b9b9b9;
     --separator-color: #C7C7C7;
     --bg-image: url(./img/mveu-back-gr.png);
-    --link-hover-color: rgba(71, 71, 71, 0.753);
+    --link-hover-color: rgba(19, 17, 17, 0.753);
 }
 
 [data-theme="dark"] { /* CSS переменные для темной темы */
     --bg-color: #1a1a1a;
     --text-color: #ffffff;
     --footer-bg: #2d2d2d;
-    --entrance-bg: #55a8e0;
-    --input-border: #555555;
+    --input-border: #383838;
+    --input-bg: #dadada;
+    --i-plaveholder-color: #ffffff;
     --separator-color: #555555;
     --bg-image: url(./img/mveu-back-gr-bl.png);
     --link-hover-color: rgba(200, 200, 200, 0.8);
@@ -58,7 +60,7 @@ body .wrapper1 { /* Основной контейнер контента */
 */
 
 header { /* Стили шапки сайта */
-    background-image: linear-gradient(145deg, #4EC4F2, #4D89BF); /* Градиент от голубого к синему */
+    background-image: linear-gradient(90deg, #4EC4F2, #4D89BF); /* Градиент от голубого к синему */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.30); /* Тень снизу */
     height: 80px; /* Высота шапки */
     display: flex; /* Flexbox контейнер */
@@ -91,7 +93,7 @@ header img { /* Изображения в шапке */
 }
 
 .theme-toggle:hover { /* Кнопка переключения темы */
-    border: 1px solid rgb(184, 184, 184);
+    border: 1px solid #3f9ec4;
 }
 
 /*MARK: Контент
@@ -110,12 +112,17 @@ main { /* Основная область контента */
     box-sizing: border-box; /* Включаем padding в размер */
 }
 
+:root {
+    --mainas1: #4EC4F2;
+    --mainas2: #4d8abfe5;
+}
+
 .entrance { /* Форма входа */
     display: flex; /* Flexbox контейнер */
     flex-direction: column; /* Элементы в столбик */
     align-items: center; /* Центрирование элементов */
-    background-color: var(--entrance-bg); /* Фон из переменной */
-    box-shadow: -6px 0px 19px rgba(0, 35, 88, 0.25), 6px 0px 19px rgba(0, 35, 88, 0.25), 0px 6px 19px rgba(0, 35, 88, 0.25), 0px -6px 19px rgba(0, 35, 88, 0.25); /* Тень со всех сторон */
+    background-image: linear-gradient(0deg, #4EC4F2, #4d8abfe5); /* Фон из переменной */
+    box-shadow: -1px 0px 19px rgba(0, 35, 88, 0.25), 1px 0px 19px rgba(0, 35, 88, 0.25), 0px 1px 19px var(--mainas1), 0px -1px 19px var(--mainas2); /* Тень со всех сторон */
     width: 90%; /* Ширина 90% от родителя */
     max-width: 354px; /* Максимальная ширина */
     min-height: 195px; /* Минимальная высота */
@@ -132,8 +139,9 @@ input { /* Поля ввода */
     margin-top: 20px; /* Отступ сверху */
     border-radius: 8px; /* Скругленные углы */
     border: 2px solid #bebebe; /* Серая рамка */
-    font-size: 16px; /* Размер шрифта */
+    font-size: 14px; /* Размер шрифта */
     box-sizing: border-box; /* Включаем padding в размер */
+    background-color: #ffffff;
 }
 
 .entrance .wrapper { /* Контейнер кнопок в форме */
@@ -147,8 +155,8 @@ input { /* Поля ввода */
 .entrance .wrapper button { /* Кнопки в форме */
     cursor: pointer; /* Курсор-указатель */
     border: none; /* Убираем рамку */
-    background: none; /* Убираем фон */
-    color: white; /* Белый цвет текста */
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый */ /* Белый цвет текста */
     margin: 0 15px; /* Отступы слева и справа */
     padding: 12px 20px; /* Внутренние отступы */
     font-size: 16px; /* Размер шрифта */
@@ -157,8 +165,13 @@ input { /* Поля ввода */
 }
 
 .entrance .wrapper button:hover { /* Эффект при наведении на кнопки */
-    color: rgba(255, 255, 255, 0.753); /* Полупрозрачный белый */
-    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    color: rgba(255, 255, 255, 1); /* Полупрозрачный белый */
+}
+
+.entrance .wrapper button:active { /* Эффект при нажатии на кнопки */
+    box-shadow: inset 0px 0px 5px 11px rgba(88, 88, 88, 0.048);
+    font-size: 15px;
+    transition: all 0.1s ease;
 }
 
 /*MARK: Подвал
@@ -218,7 +231,7 @@ footer .wrapper img:hover { /* Эффект при наведении на ик�
     padding-top: 5px; /* Внутренний отступ сверху */
 }
 
-/*MARK: Aдаптивность
+/*MARK: Aдаптив
 */
 
 @media (max-width: 1180px) { /* Экраны до 1180px */
